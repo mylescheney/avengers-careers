@@ -1,0 +1,202 @@
+:root {
+    --light-red: #c72523;
+    --dark-red: #951e22;
+    --grey: #b9beba;
+    --light-blue: #4d8ab5;
+    --dark-blue: #1e2639;
+
+    
+}
+
+body {
+    background-color: var(--grey);
+    font-family: Roboto, sans-serif;
+    font-size: 1.1em;
+}
+
+nav {
+    background-color: var(--dark-red);
+}
+.navbar-brand {
+    margin-left: 5%;
+}
+.nav-button {
+    margin-right: 5%;
+}
+#app-button{
+    color: white;
+    background-color: var(--light-blue);
+}
+#app-button:hover {
+    background-color: var(--dark-blue);
+}
+li {
+   margin-left: 40px;
+}
+
+h1 {
+    font-family: Oswald, sans-serif;
+    font-weight: 700;
+    padding-bottom: .2em;
+}
+h2, h3, h4, h5, h6 {
+    font-family: Oswald, sans-serif;
+}
+#hero-life-heading {
+    color: white;
+    background-color: var(--dark-blue);
+}
+h4 {
+    text-align: center;
+    color: white;
+    background-color: var(--light-red);
+}
+h5 {
+    margin: 8px auto;
+    padding: 6px;
+    text-align: center;
+    border-bottom: solid;
+    border-color: var(--dark-blue);
+}
+h6 {
+    text-align: center;
+}
+.modal-header {
+    background-color: var(--light-blue);
+}
+#application-heading {
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+input[type="text"]::placeholder { 
+    text-align: right;
+}
+input[type="text"]:-ms-input-placeholder {
+    text-align: right;
+}
+textarea {
+    resize: none;
+}
+.close-btn {
+    color: white;
+}
+.close-btn:hover {
+    color: white;
+}
+option {
+    text-align: center;
+}
+.radio-div {
+    display: flex;
+    justify-content: center;
+}
+.radio-option {
+    width: 20%;
+}
+.app-btn-div {
+    display: flex;
+    justify-content: flex-end;
+}
+.discard-btn {
+    color: white;
+    background-color: var(--light-red);
+}
+.discard-btn:hover {
+    color: white;
+    background-color: var(--dark-red);
+}
+.submit-btn {
+    margin-left: 1em;
+    margin-right: 1em;
+    color: white;
+    background-color: var(--light-blue);
+}
+.submit-btn:hover {
+    color: white;
+    background-color: var(--dark-blue);
+}
+
+header {
+    margin: 1.8em auto;
+}
+.main-img {
+    height: 30vh;
+}
+.caption-div {
+    background-color: var(--dark-blue);
+    margin: auto 0 auto 0;
+    padding: 2% 3% 0 3%;
+}
+.caption {
+    color: white;
+    text-align: center; 
+}
+
+#hero-life {
+    margin: 0 6% 3% 6%;
+}
+.hero-text-content {
+    margin: auto 0;
+    padding-right: 4%;
+    text-align: center;
+}
+.carousel-img {
+    height: 30vh;
+}
+.disclaimer {
+    font-size: .9em;
+    font-style: italic;
+}
+
+
+footer {
+    color: white;
+    background-color: var(--dark-red);
+}
+.footer-list {
+    margin: 0;
+    padding: 0;
+}
+.footer-list li {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (min-width: 576px) {
+    .main-img, .carousel-img {
+        height: 38vh;
+    }
+}
+@media (min-width: 768px) {
+    .main-img, .carousel-img {
+        height: 45vh;
+    }
+    .caption {
+        padding: 0 3% 5% 3%;
+    }
+}
+@media (min-width: 992px) {
+    h2 {
+        padding-left: 2%;
+    }
+    .hero-text-content {
+        text-align: justify;
+    }
+
+    .radio-option {
+        width: 11%;
+    }
+}
+@media (min-width: 1200px) {
+    .main-img {
+        height: 50vh;
+    }
+}

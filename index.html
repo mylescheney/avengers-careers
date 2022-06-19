@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <title>Recruiting Earth's Mightiest</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark py-0">
+        <a class="navbar-brand" href="#call-to-action"><img height="100px" width="180px"
+                src="img/avengers-logo.png"></a>
+        <button class="navbar-toggler nav-button" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbar-items">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-items">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#mission-statement">The Mission</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#hero-life">Hero Life</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link" href="" data-bs-toggle="modal"
+                        data-bs-target="#application-modal">Application</a>
+                </li>
+            </ul>
+        </div>
+
+        <a id="app-button" class="btn d-none d-lg-block nav-button" data-bs-toggle="modal"
+            data-bs-target="#application-modal">
+            Application
+        </a>
+    </nav>
+
+    <div id="application-modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="application-heading">Application</h2>
+                    <button type="button" class="btn close-btn" data-bs-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row row-content">
+                            <div class="col">
+                                <form action="">
+                                    <h4>Personal Information</h4>
+                                    <div class="form-group row">
+                                        <label for="name" class="col-form-label ">Full Name</label>
+                                        <div class="">
+                                            <input type="text" class="form-control" name="name" id="name"
+                                                placeholder="It's Secure" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="aliases" class="col-form-label ">Alias(es)</label>
+                                        <div class="">
+                                            <input type="text" class="form-control" name="aliases" id="aliases">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="enemies" class="col-form-label ">Recurring Enemies</label>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" name="enemies" id="enemies">
+                                        </div>
+                                    </div>
+                                    <h4>Contact Information</h4>
+                                    <div class="form-group row">
+                                        <label for="tel-num" class="col-form-label " required>Phone Number</label>
+                                        <div class="">
+                                            <input type="tel" class="form-control" name="tel-num" id="tel-num" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-3">
+                                        <label for="email" class="col-form-label" required>Email Address</label>
+                                        <div class="">
+                                            <input type="email" class="form-control" name="email" id="email" required>
+                                        </div>
+                                    </div>
+                                    <h4>About You</h4>
+                                    <div class="form-group row">
+                                        <label for="motivation" class="col-form-label ">
+                                            <h5>Motivation for Applying</h5>
+                                        </label>
+                                        <select name="motivation" id="motivation" class="form-control" required>
+                                            <option disabled selected>Choose Your Strongest</option>
+                                            <option value="revenge">Revenge</option>
+                                            <option value="redemption">Redemption</option>
+                                            <option value="legacy">Legacy</option>
+                                            <option value="responsibliity">Great Power, Yada Yada</option>
+                                            <option value="excitement">Thrill of the Fight</option>
+                                        </select>
+                                    </div>
+
+                                    <h5>Powers (Select All That Apply)</h5>
+                                    <div class="row">
+                                        <div class="power-list col-lg-6">
+                                            <div class="form-group row">
+                                                <label for="strength" class="col-form-label offset-4 offset-lg-6">
+                                                    <input type="checkbox" name="powers" id="strength" value="strength">
+                                                    Super Strength
+                                                </label>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="speed" class="col-form-label offset-4 offset-lg-6 ">
+                                                    <input type="checkbox" name="powers" id="speed" value="speed"> Super
+                                                    Speed
+                                                </label>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="flight" class="col-form-label offset-4 offset-lg-6">
+                                                    <input type="checkbox" name="powers" id="flight" value="flight">
+                                                    Flight
+                                                </label>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="invulnerability"
+                                                    class="col-form-label offset-4 offset-lg-6">
+                                                    <input type="checkbox" name="powers" id="invulnerability"
+                                                        value="invulnerability"> Invulnerability
+                                                </label>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="shapeshifting" class="col-form-label offset-4 offset-lg-6">
+                                                    <input type="checkbox" name="powers" id="shapeshifting"
+                                                        value="shapeshifting"> Shapeshifting
+                                                </label>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="energy-blast" class="col-form-label offset-4 offset-lg-6">
+                                                    <input type="checkbox" name="powers" id="energy-blast"
+                                                        value="energy-blast"> Energy Blast
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="power-list col-lg-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label offset-4 offset-lg-1">
+                                                    <input type="checkbox" name="powers" id="mind-control"
+                                                        value="mind-control"> Mind Control
+                                                </label>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="telekinesis" class="col-form-label offset-4 offset-lg-1">
+                                                    <input type="checkbox" name="powers" id="telekinesis"
+                                                        value="telekinesis"> Telekinesis
+                                                </label>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="invisibility" class="col-form-label offset-4 offset-lg-1">
+                                                    <input type="checkbox" name="powers" id="invisibility"
+                                                        value="invisibility"> Invisibility
+                                                </label>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="teleportation" class="col-form-label offset-4 offset-lg-1">
+                                                    <input type="checkbox" name="powers" id="teleportation"
+                                                        value="teleportation"> Teleportation
+                                                </label>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="healing" class="col-form-label offset-4 offset-lg-1">
+                                                    <input type="checkbox" name="powers" id="healing" value="healing">
+                                                    Healing
+                                                </label>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="sorcery" class="col-form-label offset-4 offset-lg-1">
+                                                    <input type="checkbox" name="powers" id="sorcery" value="sorcery">
+                                                    Sorcery
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <h5>Additional Powers & Abilities</h5>
+                            <textarea id="add-powers" rows="6"></textarea>
+
+                            <h5>Agree of Disagree</h5>
+                            <h6>Killing is Sometimes Necessary</h6>
+                            <div class="radio-div form-group row">
+                                <label class="radio-option text-center" for="killing-yes">
+                                    <input name="killing-input" id="killing-yes" value="killing-yes" type="radio"> Yes
+                                </label>
+                                <label class="radio-option text-center" for="killing-no">
+                                    <input name="killing-input" id="killing-no" value="killing-no" type="radio">
+                                    No
+                                </label>
+                            </div>
+
+                            <h6>Superheroes Should Be Regulated</h6>
+                            <div class="radio-div form-group row">
+                                <label class="radio-option text-center" for="regulation-yes">
+                                    <input name="regulation-input" id="regulation-yes" value="regulation-yes"
+                                        type="radio"> Yes
+                                </label>
+                                <label class="radio-option text-center" for="regulation-no">
+                                    <input name="regulation-input" id="regulation-no" value="regulation-no"
+                                        type="radio"> No
+                                </label>
+                            </div>
+
+                            <h5>Relationship w/ Law Enforcement</h5>
+                            <div class="radio-div form-group row">
+                                <label class="radio-option" for="relationship-bad">
+                                    <input type="radio" name="law-relationship" id="relationship-bad"
+                                        value="relationship-bad"> Bad
+                                </label>
+                                <label class="radio-option" for="relationship-poor">
+                                    <input type="radio" name="law-relationship" id="relationship-poor"
+                                        value="relationship-poor"> Poor
+                                </label>
+                                <label class="radio-option" for="relationship-good">
+                                    <input type="radio" name="law-relationship" id="relationship-good"
+                                        value="relationship-good"> Good
+                                </label>
+                                <label class="radio-option" for="relationship-great">
+                                    <input type="radio" name="law-relationship" id="relationship-great"
+                                        value="relationship-great"> Great
+                                </label>
+                                <label class="radio-option" for="relationship-none">
+                                    <input type="radio" name="law-relationship" id="relationship-none"
+                                        value="relationship-none"> None
+                                </label>
+                            </div>
+
+                            <h5>Additional Qualifications & Information for Review</h5>
+                            <textarea id="add-info" rows="6"></textarea>
+
+                            <div class="mt-4 app-btn-div">
+                                <button type="button" class="btn discard-btn" data-bs-dismiss="modal">Discard</button>
+                                <button type="submit" class="btn submit-btn">Submit Application</button>
+                            </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container-fluid">
+        <header id="call-to-action">
+            <div class="row">
+                <h1 class="offset-1 col-10 text-center">Recruiting Earth's Mightiest Heroes</h1>
+                <p class="col-12 text-center">New threats call for new solutions. The Avengers are ready to open their
+                    doors to the next generation of heroes.</p>
+            </div>
+        </header>
+
+        <main>
+            <section id="mission-statement">
+                <div class="row mission-div mb-4">
+                    <img src="img/original-avengers.jpeg" alt="original avengers"
+                        class="col-md-8 offset-lg-1 col-lg-7 main-img">
+                    <div class="col-md-4 caption-div">
+                        <p class="caption">Are protecting the innocent and making the world a better place apects
+                            of your dream job? You may be looking to join the Avengers.</p>
+                    </div>
+
+                </div>
+                <div class="row mission-div mb-5">
+                    <img src="img/avengers-in-combat.jpeg" alt="avengers in combat" class="col-md-8 col-lg-7 main-img">
+                    <div class="col-md-4 order-md-first caption-div">
+                        <p class="caption">We combat the most dangerous threats from all over the
+                            universe. If you have what it takes to hold your own against anything from aliens to robots,
+                            apply now!</p>
+                    </div>
+
+                </div>
+            </section>
+            <section id="hero-life" class="row">
+                <div class="hero-text-content col-12 col-lg-6">
+                    <h2 id="hero-life-heading" class="mb-3">The Hero Life</h2>
+                    <p>Being an Avenger doesn't mean waiting until after the fact. We're on call for deployment 24/7,
+                        ready
+                        to do whatever it takes to protect the Earth and it's people.</p>
+
+                    <p>Avengers are compensated for their contributions to society. Plus your have access to the best
+                        health
+                        care in the world without ever making a copay.</p>
+                    <p>You'll get your own room at the Avengers Facility. It's a luxorious living space. The cafeteria's
+                        always open to accomodate any schedule. And there's indoor & outdoor training spaces to continue
+                        honing your skills.</p>
+                    <p>And when you want to relax we have a pool, spa and movie theater on base.</p>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <div id="facility-carousel" class="carousel slide" data-bs-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#facility-carousel" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#facility-carousel" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#facility-carousel" data-bs-slide-to="2"></li>
+                            <li data-bs-target="#facility-carousel" data-bs-slide-to="3"></li>
+                            <li data-bs-target="#facility-carousel" data-bs-slide-to="4"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100 carousel-img" src="img/avengers-facility-1.jpeg"
+                                    alt="outside Avengers facility">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 carousel-img" src="img/avengers-facility-2.png" alt="pier">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 carousel-img" src="img/avengers-facility-3.jpeg"
+                                    alt="bedroom">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 carousel-img" src="img/avengers-facility-4.png" alt="gym">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 carousel-img" src="img/avengers-facility-5.jpeg"
+                                    alt="shooting range">
+                            </div>
+                        </div>
+
+                        <a class="carousel-control-prev" href="#facility-carousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#facility-carousel" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="visually-hidden">Next</span>
+                        </a>
+                    </div>
+                    <p class="text-center mt-3 px-md-5 disclaimer">The Avengers facility is in upstate New York, but
+                        you'll be spending time all over the world & even outer space if the job calls for it!</p>
+                </div>
+
+    </div>
+
+
+    </section>
+    </main>
+
+    <footer class="pt-4 pb-3">
+        <ul class="row mb-3 list-unstyled footer-list">
+            <li class="d-none d-sm-inline col-sm-4 col-md-4 col-lg-2 text-center"><a href="#mission-statement">The
+                    Mission</a></li>
+            <li class="d-none d-sm-block col-sm-4 col-md-4 col-lg-2 text-center"><a href="#hero-life">Hero Life</a></li>
+            <li class="d-none d-sm-block col-sm-4 col-md-4 col-lg-2 text-center"><a href="" data-bs-toggle="modal"
+                    data-bs-target="#application-modal">Apply</a>
+            </li>
+        </ul>
+
+        <div class="row">
+            <p class="col-12 offset-sm-1 col-sm-5 offset-md-0 col-md-4 offset-lg-4 col-lg-3 text-center">Avengers
+                Hotline <a href="tel:+15052836437">1-505-AVENGER</a></p>
+            <p class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">Email @ <a
+                    href="mailto:careers@avengers.com">careers@avengers.com</a></p>
+            <p class="col-12 col-md-4 col-lg-2 text-center"> &copy; 2021 Avengers</p>
+        </div>
+
+    </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
